@@ -13,7 +13,9 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
-
+  config.omniauth :twitter, ENV['OMNIAUTH_TWITTER_KEY'], ENV['OMNIAUTH_TWITTER_SEC_KEY']
+  config.omniauth :facebook, ENV['OMNIAUTH_FACEBOOK_KEY'], ENV['OMNIAUTH_FACEBOOK_SEC_KEY']
+  config.omniauth :line, ENV['OMNIAUTH_LINE_CHANNEL_ID'], ENV['OMNIAUTH_LINE_CHANNEL_SEC_KEY']
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
