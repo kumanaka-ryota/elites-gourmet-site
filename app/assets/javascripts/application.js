@@ -17,3 +17,4 @@
 //= require underscore/underscore-min
 //= require gmaps/google
 //= require_tree .
+//= require ckeditor/init
