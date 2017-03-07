@@ -24,6 +24,16 @@
         <%= f.hidden_field :address %>
       </tr>
       <tr>
+        <th><%= f.label :comment %></th>
+        <td>
+          <%= @restaurant.comment %>
+          <div style='width: 350px;'>
+            <div id="map" style='width: 350px; height: 150px;'></div>
+          </div>
+        </td>
+        <%= f.hidden_field :comment %>
+      </tr>      
+      <tr>
         <th><%= f.label :genre_ids %></th>
         <td>
           <%= render 'restaurants/genre_list', restaurant: @restaurant %>
