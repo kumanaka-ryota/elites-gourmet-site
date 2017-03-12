@@ -2,12 +2,21 @@
 <html>
 <head>
   <title>ElitesGourmetSite</title>
+  <script src="//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" type="text/javascript"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<!-- 下記を追記 -->
+  <div class="login_logout_wrapper">
+    <% if user_signed_in? %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Log in", new_user_session_path %>
+    <% end %>
+  </div>
+<p class="notice"><%= notice %></p>
 <%= yield %>
 
 </body>

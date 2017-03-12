@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
+//= require underscore/underscore-min
+//= require gmaps/google
 //= require_tree .
+//= require ckeditor/init
